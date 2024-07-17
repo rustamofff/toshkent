@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+body {
+  background-image: url("https://www.britishmuseum.org/sites/default/files/styles/uncropped_huge/public/2019-10/Great%20Court%2004.jpg?itok=V1gbVKqg");
+  width: 100%;
+  height: 100vh;
+  // background: #e4e4e4;
+  background-attachment: fixed;
+}
+.outlet {
+  // padding-top: 160px;
+  min-height: 90vh;
+}
