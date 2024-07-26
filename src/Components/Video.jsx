@@ -47,7 +47,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaCircleChevronRight } from "react-icons/fa6";
 
-import videoHome from "../assets/muzeyVideo.mp4";
+import videoHome from "../assets/videoHome.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
