@@ -370,7 +370,7 @@ export default function LibraryHome() {
   return (
     <div className="ashyo_home_container">
       <div className="title_container">
-        <h1 className="title">Arxeologiya yodgorliklar</h1>
+        <h1 className="title">Yodgorliklar</h1>
         <Link to="/arxeology">
           <p>
             <span>BARCHASI</span> <FaArrowRightLong />
@@ -388,6 +388,24 @@ export default function LibraryHome() {
           disableOnInteraction: false,
         }}
         modules={[Scrollbar, Autoplay]}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          610: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1060: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        }}
         className="mySwiper"
       >
         {apiData?.results?.map((arxeologyHome) => {

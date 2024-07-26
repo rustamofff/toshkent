@@ -53,6 +53,24 @@ export default function ArxeologyHome() {
           hide: true,
         }}
         modules={[Scrollbar]}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          695: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          696: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+        }}
         className="mySwiper"
       >
         {apiData?.map((newsHome) => {

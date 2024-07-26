@@ -129,6 +129,24 @@ export default function AshyolarHome() {
           disableOnInteraction: false,
         }}
         modules={[Scrollbar, Autoplay]}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          610: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1060: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        }}
         className="mySwiper"
       >
         {apiData?.results?.map((ashyoHome) => {

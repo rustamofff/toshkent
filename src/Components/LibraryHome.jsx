@@ -34,10 +34,10 @@ export default function LibraryHome() {
   //
 
   return (
-    <div className="library_home_container">
+    <div className="ashyo_home_container">
       <div className="title_container">
         <h1 className="title">Kutubxona</h1>
-        <Link to="/library">
+        <Link to="/ashyolar">
           <p>
             <span>BARCHASI</span> <FaArrowRightLong />
           </p>
@@ -54,23 +54,40 @@ export default function LibraryHome() {
           disableOnInteraction: false,
         }}
         modules={[Scrollbar, Autoplay]}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          610: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1060: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        }}
         className="mySwiper"
       >
         {apiData?.results?.map((libraryHome) => {
           return (
             <SwiperSlide>
-              <div className="library_home_card">
-                <div className="library_home_img">
+              <div className="ashyo_home_card" key={libraryHome.id}>
+                <div className="ashyo_home_img">
                   <img src={libraryHome.image} alt="" />
                 </div>
-                <div className="library_home_title">
-                  <a
-                    href={libraryHome.file}
-                    target="_blank"
-                    className="library_home_name"
-                  >
+                <div
+                  className="ashyo_home_title"
+                  onClick={() => navigate(`/ashyolarDetail/${libraryHome.id}`)}
+                >
+                  <h2 className="ashyo_home_name">
                     <span>{libraryHome.title_uz}</span>
-                  </a>
+                  </h2>
                 </div>
               </div>
             </SwiperSlide>
