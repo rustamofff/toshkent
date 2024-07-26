@@ -55,7 +55,7 @@ function WeatherSide({ t }) {
       });
   }, []);
   return (
-    <div className="weather__row" style={{ width: 300, marginRight: 30 }}>
+    <div className="weather__row" style={{ width: 200, marginRight: 30 }}>
       <div className="col-lg-12" style={{ justifyContent: "flex-end" }}>
         <Swiper
           // direction="vertical"
@@ -70,7 +70,7 @@ function WeatherSide({ t }) {
           }}
           slidesPerView={1}
           modules={[Autoplay]}
-          spaceBetween={30}
+          // spaceBetween={}
         >
           {daily?.slice(0, 14).map((res, i) => (
             <SwiperSlide key={i}>

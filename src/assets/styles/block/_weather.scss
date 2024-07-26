@@ -1,12 +1,13 @@
-.weater-wrap {
+.weather__row .weater-wrap {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  // justify-content: flex-end;
   width: 100%;
   // margin-right: 30px !important;
   // margin-left: 40px !important;
-  height: 50px;
+  // height: 50px;
   text-transform: capitalize;
+  z-index: -1;
 
   img {
     padding: 5px;
@@ -15,21 +16,21 @@
   p {
     display: flex;
     align-items: center;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 15px;
     line-height: 16px;
     color: #fff;
-    margin-bottom: 0rem;
-    // flex-direction: column;
-    padding: 0 5px;
+    // margin-bottom: 0rem;
+    flex-direction: column;
+    // padding: 0 5px;
     // width: 50%;
   }
 
   .div-weater {
-    width: 57%;
+    // width: 57%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    // justify-content: flex-end;
 
     img {
       width: 40px;
@@ -39,5 +40,5 @@
 }
 
 .swip-weater-wrap {
-  width: 150px;
+  width: 100px;
 }

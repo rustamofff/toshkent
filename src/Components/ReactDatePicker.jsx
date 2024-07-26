@@ -130,7 +130,7 @@ export default function ReactDatePicker() {
   return (
     <>
       <div className="live_clendar_item">
-        <FaCalendarAlt />
+        <FaCalendarAlt style={{ color: "black" }} />
         <DatePicker
           selected={selectedDate}
           onChange={(e) => setSelectedDate(e)}
