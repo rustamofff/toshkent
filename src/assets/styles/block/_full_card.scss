@@ -27,3 +27,22 @@
     }
   }
 }
+
+@media (max-width: 780px) {
+  .full_card_container {
+    .max-w-sm {
+      height: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .full_card_container {
+    padding: 4rem 2rem 4rem 2rem !important;
+  }
+}
+@media screen and (max-width: 580px) {
+  .full_card_container {
+    padding: 4rem 1rem 4rem 1rem !important;
+  }
+}

@@ -42,11 +42,30 @@
   z-index: 2;
 }
 
-.overlay h1 {
-  width: 100%;
-  border-bottom: 3px solid #fff;
-  color: white;
-  font-weight: 600;
-  font-size: 2.5rem; /* Adjust as needed */
-  z-index: 3;
+.overlay {
+  h1 {
+    width: 100%;
+    border-bottom: 3px solid #fff;
+    color: white;
+    font-weight: 600;
+    font-size: 2.5rem; /* Adjust as needed */
+    z-index: 3;
+  }
+}
+
+@media (max-width: 880px) {
+  .overlay {
+    padding: 4rem 3rem !important;
+    h1 {
+      font-size: 2rem !important;
+    }
+  }
+}
+@media (max-width: 527px) {
+  .overlay {
+    padding: 4rem 2rem !important;
+    h1 {
+      font-size: 1.5rem !important;
+    }
+  }
 }

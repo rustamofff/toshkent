@@ -15,3 +15,12 @@
     }
   }
 }
+
+@media (max-width: 1280px) {
+  .arxeology_detail_img {
+    img {
+      padding: 0 0.7rem !important;
+      height: 25rem !important;
+    }
+  }
+}

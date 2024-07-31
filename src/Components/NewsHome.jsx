@@ -73,7 +73,7 @@ export default function ArxeologyHome() {
         }}
         className="mySwiper"
       >
-        {apiData?.map((newsHome) => {
+        {apiData?.response?.map((newsHome) => {
           return (
             <SwiperSlide>
               <div className="exhibition-card" key={newsHome.id}>

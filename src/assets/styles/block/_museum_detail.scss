@@ -58,6 +58,13 @@
   }
 }
 
+@media (max-width: 500px) {
+  .museum_detail_content {
+    iframe {
+      height: 50vh !important;
+    }
+  }
+}
 //
 //  fake video scss
 

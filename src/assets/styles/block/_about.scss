@@ -21,7 +21,7 @@ $--second: #6b1324;
 }
 
 .about_title {
-  padding-top: 2rem;
+  // padding-top: 2rem;
 
   h1 {
     font-size: 2.2rem;
@@ -45,7 +45,7 @@ $--second: #6b1324;
       font-weight: 600;
       line-height: 1.6;
       margin-bottom: 0.6em;
-      margin-top: 1.6em;
+      // margin-top: 1.6em;
       text-align: justify;
     }
   }
@@ -124,46 +124,6 @@ $--second: #6b1324;
   }
 }
 
-@media screen and (max-width: 550px) {
-  .people_container {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 4fr));
-    justify-content: center;
-    gap: 15px;
-    padding-top: 2rem;
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 1500px) {
-  .container_full {
-    width: 91%;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 1350px) {
-  .container_full {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .container_full {
-    width: 88% !important;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 1054px) {
-  .container_full {
-    width: 88% !important;
-    margin: 0 auto;
-  }
-}
-
 @media screen and (max-width: 977px) {
   .about_img {
     margin-top: 2rem;
@@ -176,30 +136,40 @@ $--second: #6b1324;
   }
 }
 
-@media screen and (max-width: 913px) {
-  .container_full {
-    width: 88% !important;
-    margin: 0 auto;
+@media screen and (max-width: 800px) {
+  .about_content_container {
+    padding: 4rem 2rem 4rem 2rem !important;
+  }
+}
+@media screen and (max-width: 686px) {
+  .people_card {
+    height: 430px !important;
+  }
+  .people_name {
+    font-size: 18px !important;
+  }
+  .people_position {
+    font-size: 15px !important;
   }
 }
 
-@media screen and (max-width: 674px) {
-  .container_full {
-    width: 87% !important;
-    margin: 0 auto;
+@media screen and (max-width: 580px) {
+  .about_content_container {
+    padding: 4rem 1rem 4rem 1rem !important;
   }
 }
 
-@media screen and (max-width: 530px) {
-  .container_full {
-    width: 85% !important;
+@media screen and (max-width: 550px) {
+  .people_container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 4fr));
+    justify-content: center;
+    gap: 15px;
+    padding-top: 2rem;
+    width: 80%;
     margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 337px) {
-  .container_full {
-    width: 95% !important;
-    margin: 0 auto;
+    .people_card {
+      width: auto !important;
+    }
   }
 }

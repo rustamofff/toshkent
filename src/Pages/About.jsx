@@ -75,9 +75,9 @@ export default function About() {
                   <div className="people_card" key={olimlar.id}>
                     <img src={olimlar.image} alt="rasm" />
                     <div className="people_content">
-                      <h4>{olimlar.fullname_uz}</h4>
+                      <h4 className="people_name">{olimlar.fullname_uz}</h4>
 
-                      <p>{olimlar.pasition_uz}</p>
+                      <p className="people_position">{olimlar.pasition_uz}</p>
                     </div>
                   </div>
                 );

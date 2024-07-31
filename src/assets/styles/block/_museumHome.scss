@@ -38,14 +38,17 @@
       .museum_home_img {
         position: relative;
         width: fit-content;
+
         .museum_home_img_card {
           height: 450px;
+
           position: relative;
           overflow: hidden;
           img {
             height: 100%;
             display: block;
             border-radius: 8px;
+            width: 100%;
 
             object-fit: cover;
           }
@@ -77,5 +80,28 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .museum_home_container {
+    margin-top: 10rem !important;
+    padding: 0 3rem 4rem 3rem !important;
+  }
+}
+@media (max-width: 810px) {
+  .museum_home_img_card {
+    height: 400px !important;
+  }
+}
+@media (max-width: 680px) {
+  .museum_home_img_card {
+    height: 350px !important;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .museum_home_container {
+    padding: 0 2rem 4rem 2rem !important;
   }
 }

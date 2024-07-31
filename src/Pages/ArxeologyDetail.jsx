@@ -76,7 +76,7 @@ export default function ArxeologyDetail() {
                       <iframe
                         width="560"
                         height="315"
-                        src={convertToEmbedLink(apiData?.link)}
+                        src={convertToEmbedLink(apiData?.video_link)}
                         title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

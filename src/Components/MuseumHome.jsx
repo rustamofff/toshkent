@@ -55,9 +55,23 @@ export default function MuseumHome() {
           disableOnInteraction: false,
         }}
         modules={[Scrollbar, Autoplay]}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          650: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1080: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }}
         className="mySwiper"
       >
-        {apiData?.map((museumHome) => {
+        {apiData?.response?.map((museumHome) => {
           return (
             <SwiperSlide>
               <div

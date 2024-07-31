@@ -31,7 +31,7 @@ export default function News() {
       <section class="news_card_container bg-white dark:bg-gray-900">
         <div class="container px-6 py-10 mx-auto">
           <div class="grid grid-cols-1 gap-8 mt-8 lg:grid-cols-2">
-            {apiData?.map((news) => (
+            {apiData?.response?.map((news) => (
               <div key={news.id}>
                 <img
                   class="relative z-10 object-cover w-full rounded-md h-96"

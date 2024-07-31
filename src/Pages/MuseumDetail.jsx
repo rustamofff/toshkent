@@ -348,28 +348,6 @@ const MuseumDetail = () => {
     fetchData();
   }, [id]);
 
-  useEffect(() => {
-    const handleFocus = () => {
-      toast.info("Ekran yonidan o'tildi!", {
-        autoClose: 3000,
-        hideProgressBar: true,
-        closeButton: false,
-        pauseOnHover: false,
-        draggable: false,
-        progress: undefined,
-        // onClose: () => {
-        //   history.push("/qaysi orqali saytga yuborilishi kerak");
-        // },
-      });
-    };
-
-    window.addEventListener("focus", handleFocus);
-
-    return () => {
-      window.removeEventListener("focus", handleFocus);
-    };
-  }, [history]);
-
   const handlePlayButtonClick = () => {
     setIsVideoPlaying(true);
   };
