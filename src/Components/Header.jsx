@@ -221,8 +221,9 @@ import Weather from "./Weather";
 import ReactDatePicker from "./ReactDatePicker";
 // import { IoSearchSharp } from "react-icons/io5";
 import logoImg from "../../public/images/TA-removebg-preview.png";
+import { useTranslation } from "react-i18next";
 
-export default function Header() {
+export default function Header({ switchLanguage }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -253,12 +254,19 @@ export default function Header() {
     };
   }, [isOpen]);
 
+  // translate
+  const { t } = useTranslation();
+
   return (
     <header className="navbar">
       <div className="logo">
         <Link to="/">
           <img className="logo_img" src={logoImg} alt="" />
         </Link>
+        <select onChange={(e) => switchLanguage(e.target.value)}>
+          <option value="uz">O'zbekcha</option>
+          <option value="en">English</option>
+        </select>
       </div>
       <div className={`nav-items ${isOpen ? "open" : ""}`}>
         <div className="top-row">
@@ -281,23 +289,23 @@ export default function Header() {
         </div>
         <div className="bottom-row">
           <div className="menu-item">
-            <Link to="/news">Yangiliklar</Link>
+            <Link to="/news">{t("news")}</Link>
           </div>
           <div className="menu-item">
-            <Link to="/arxeology">Yodgorliklar</Link>
+            <Link to="/arxeology">{t("arxeology")}</Link>
           </div>
           <div className="menu-item">
             {" "}
-            <Link to="/ashyolar">Ashyolar</Link>
+            <Link to="/ashyolar">{t("ashyo")}</Link>
           </div>
           <div className="menu-item">
-            <Link to="/museum">Muzeylar</Link>
+            <Link to="/museum">{t("museum")}</Link>
           </div>
           <div className="menu-item">
-            <Link to="/library">Kutubxona</Link>
+            <Link to="/library">{t("library")}</Link>
           </div>
           <div className="menu-item">
-            <Link to="/about">Biz haqimizda</Link>
+            <Link to="/about">{t("about")}</Link>
           </div>
         </div>
       </div>

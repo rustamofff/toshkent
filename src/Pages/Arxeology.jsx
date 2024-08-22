@@ -43,7 +43,9 @@ export default function Arxeology() {
               />
 
               <div className="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50 text-white p-4 rounded-b-lg">
-                <h1 className="text-2xl font-semibold">{arxeology.title_uz}</h1>
+                <h1 className="card_title text-2xl font-semibold">
+                  {arxeology.title_uz}
+                </h1>
                 <p
                   className="mt-2"
                   dangerouslySetInnerHTML={{ __html: arxeology.context_uz }}

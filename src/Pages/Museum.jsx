@@ -29,7 +29,7 @@ export default function Museum() {
       <PageTitle title={"Muzeylar"} />
       <div class="museum_content_container overflow-x-hidden">
         <div class="museum_content h-full  place-items-center gap-x-4 gap-y-6 p-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {apiData?.response?.map((museum) => {
+          {apiData?.map((museum) => {
             return (
               // <Link to="/museumDetail" key={museum.id}>
               <div class="museum_page_card  space-y-2" key={museum.id}>

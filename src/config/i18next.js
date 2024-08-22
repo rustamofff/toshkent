@@ -1,23 +1,38 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-// import Translationzu from "../assets/locale/zu.json";
-import TranslationUz from "../assets/locale/uz.json";
-import TranslationEn from "../assets/locale/en.json";
+
 const resources = {
   uz: {
-    translation: TranslationUz,
+    translation: {
+      news: "Yangiliklar",
+      arxeology: "Yodgorliklar",
+      ashyo: "Ashyolar",
+      museum: "Muzeylar",
+      library: "Kutubxona",
+      about: "Biz haqimizda",
+      all: "Barchasi",
+    },
   },
   en: {
-    translation: TranslationEn,
+    translation: {
+      news: "News",
+      arxeology: "Memorials",
+      ashyo: "Artifacts",
+      museum: "Museums",
+      library: "Library",
+      about: "About Us",
+      all: "all of",
+    },
   },
 };
-i18n.use(initReactI18next).init({
-  resources: resources,
-  lng: localStorage.getItem("JADID_LAN") ?? "uz",
-  fallbackLng: localStorage.getItem("JADID_LAN") ?? "uz",
 
+i18n.use(initReactI18next).init({
+  resources,
+  lng: "uz", // Boshlang'ich til
+  fallbackLng: "uz",
   interpolation: {
     escapeValue: false,
   },
 });
+
 export default i18n;

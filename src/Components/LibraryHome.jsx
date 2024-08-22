@@ -13,6 +13,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { endpoints } from "../config/endpoints";
 import { DataService } from "../config/dataService";
+import { useTranslation } from "react-i18next";
 
 export default function LibraryHome() {
   // bu qism api lar bilan ishlash uchun
@@ -33,13 +34,16 @@ export default function LibraryHome() {
   }, []);
   //
 
+  // translate
+  const { t } = useTranslation();
+
   return (
     <div className="ashyo_home_container">
       <div className="title_container">
-        <h1 className="title">Kutubxona</h1>
+        <h1 className="title">{t("library")}</h1>
         <Link to="/ashyolar">
           <p>
-            <span>BARCHASI</span> <FaArrowRightLong />
+            <span>{t("all")}</span> <FaArrowRightLong />
           </p>
         </Link>
       </div>

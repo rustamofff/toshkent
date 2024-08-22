@@ -13,6 +13,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { endpoints } from "../config/endpoints";
 import { DataService } from "../config/dataService";
+import { useTranslation } from "react-i18next";
 
 export default function MuseumHome() {
   const navigate = useNavigate();
@@ -34,13 +35,15 @@ export default function MuseumHome() {
   }, []);
   //
 
+  // translate
+  const { t } = useTranslation();
   return (
     <div className="museum_home_container">
       <div className="title_container">
-        <h1 className="title">Muzeylar</h1>
+        <h1 className="title">{t("museum")}</h1>
         <Link to="/museum">
           <p>
-            <span>BARCHASI</span> <FaArrowRightLong />
+            <span>{t("all")}</span> <FaArrowRightLong />
           </p>
         </Link>
       </div>
@@ -71,7 +74,7 @@ export default function MuseumHome() {
         }}
         className="mySwiper"
       >
-        {apiData?.response?.map((museumHome) => {
+        {apiData?.map((museumHome) => {
           return (
             <SwiperSlide>
               <div

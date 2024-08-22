@@ -346,6 +346,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { endpoints } from "../config/endpoints";
 import { DataService } from "../config/dataService";
+import { useTranslation } from "react-i18next";
 
 export default function LibraryHome() {
   const navigate = useNavigate();
@@ -367,13 +368,15 @@ export default function LibraryHome() {
   }, []);
   //
 
+  // translate
+  const { t } = useTranslation();
   return (
     <div className="ashyo_home_container">
       <div className="title_container">
-        <h1 className="title">Yodgorliklar</h1>
+        <h1 className="title">{t("arxeology")}</h1>
         <Link to="/arxeology">
           <p>
-            <span>BARCHASI</span> <FaArrowRightLong />
+            <span>{t("all")}</span> <FaArrowRightLong />
           </p>
         </Link>
       </div>

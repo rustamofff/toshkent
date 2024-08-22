@@ -42,7 +42,10 @@ export default function Ashyolar() {
                   class="w-full h-auto object-cover rounded-lg"
                 />
                 <div class="absolute bottom-0 left-0 right-0 h-40 bg-black bg-opacity-50  text-white p-4 rounded-b-lg">
-                  <h1 class="text-2xl font-semibold">{ashyo.title_uz}</h1>
+                  <h1 class="card_title text-2xl font-semibold">
+                    {ashyo.title_uz}sdlabskj sdfkjbsjdk sdkjbhsdjk shbfdskj
+                    sdkfhkjhkj
+                  </h1>
                   <p
                     class="mt-2"
                     dangerouslySetInnerHTML={{ __html: ashyo.context_uz }}

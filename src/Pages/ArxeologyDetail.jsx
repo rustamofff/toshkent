@@ -61,7 +61,7 @@ export default function ArxeologyDetail() {
                   </div> */}
                   <div class="flex items-center py-2">
                     <span
-                      class="text-gray-500"
+                      class="text-gray-500 "
                       dangerouslySetInnerHTML={{ __html: apiData?.context_uz }}
                     ></span>
                   </div>

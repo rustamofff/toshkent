@@ -15,6 +15,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { DataService } from "../config/dataService";
 import { endpoints } from "../config/endpoints";
 import dateFormat from "dateformat";
+import { useTranslation } from "react-i18next";
 
 export default function ArxeologyHome() {
   const navigate = useNavigate();
@@ -36,13 +37,15 @@ export default function ArxeologyHome() {
   }, []);
   //
 
+  // translate
+  const { t } = useTranslation();
   return (
     <div className="swiper_archi_container">
       <div className="title_container">
-        <h1 className="title">Yangiliklar</h1>
+        <h1 className="title">{t("news")}</h1>
         <Link to="/news">
           <p>
-            <span>BARCHASI</span> <FaArrowRightLong />
+            <span>{t("all")}</span> <FaArrowRightLong />
           </p>
         </Link>
       </div>
@@ -73,7 +76,7 @@ export default function ArxeologyHome() {
         }}
         className="mySwiper"
       >
-        {apiData?.response?.map((newsHome) => {
+        {apiData?.map((newsHome) => {
           return (
             <SwiperSlide>
               <div className="exhibition-card" key={newsHome.id}>
